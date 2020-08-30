@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/find/find",
+    "pages/classification/classification",
+    "pages/collection/collection",
+    "pages/detail/detail",
+    "pages/memberDetail/memberDetail",
+    "pages/index/index",
+    "pages/search/search",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#292929",
+    "navigationBarTitleText": "嘉彦电台",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#ccc",
+    "selectedColor": "green",
+    "list": [
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "iconPath": "./images/icon_normal.png",
+        "selectedIconPath": "./images/icon_pressed.png"
+      },
+      {
+        "pagePath": "pages/classification/classification",
+        "text": "分类",
+        "iconPath": "./images/fen-icon.png",
+        "selectedIconPath": "./images/fen-selectIcon-g.png"
+      },
+      {
+        "pagePath": "pages/collection/collection",
+        "text": "收藏",
+        "iconPath": "./images/collection-icon2.png",
+        "selectedIconPath": "./images/collection-icon2-select.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "./images/icon_normal.png",
+        "selectedIconPath": "./images/icon_pressed.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

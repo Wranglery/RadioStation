@@ -1,0 +1,76 @@
+<!-- 若是没有登录就显示登录界面 -->
+<block wx:if="{{login}}">
+    <!-- logo -->
+    <view class="logo" hover-class="none" hover-stop-propagation="false">
+        <image class="logoImg" src="/image/logo.png" mode="widthFix" lazy-load="false"></image>
+    </view>
+    <!-- 登录按钮 -->
+    <view class="loginButton" hover-class="none" hover-stop-propagation="false">
+        <view class="wechatLogin">
+            <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+                <text class="icon-message"></text>  微信登录
+            </button>
+        </view>
+        <view class="phoneLogin">
+            <button>手机号登录</button>
+        </view>
+    </view>
+</block>
+<block wx:else>
+    <!-- 搜索框 -->
+    <search></search>
+    <!-- 功能栏 -->
+    <view class="titleBar">
+      <view class="itemTitle {{index == currentIndex ? 'active' : ' '}}" 
+        data-index="{{index}}" bindtap="checkItem" wx:for="{{content}}" wx:key="index">
+          {{item.text}}
+      </view>
+    </view>
+    <swiper class="swiperbox" style="min-height:{{height}}px" duration="300" current="{{currentIndex}}" bindchange="changeTab">
+        <swiper-item class="swiper-box-item" >
+            <block>
+                <view class="NoContent">
+                    <text class="icon-empty text-gray" style="font-size:400rpx"></text>
+                    <!-- <image src="/image/noContent.png"></image> -->
+                    <view class="but-box">
+                        <text style="font-size:30rpx" class="text-gray">没有内容</text>
+                        <button class="but">看看推荐</button>
+                    </view>
+                </view>
+            </block>
+        </swiper-item>
+        <swiper-item>
+            <block>
+                <view class="NoContent">
+                    <text class="icon-empty text-gray" style="font-size:400rpx"></text>
+                    <view class="but-box">
+                        <text style="font-size:30rpx" class="text-gray">没有内容</text>
+                        <button class="but">看看推荐</button>
+                    </view>
+                </view>
+            </block>
+        </swiper-item>
+        <swiper-item>
+            <block>
+                <view class="NoContent">
+                    <text class="icon-empty text-gray" style="font-size:400rpx"></text>
+                    <view class="but-box">
+                        <text style="font-size:30rpx" class="text-gray">没有内容</text>
+                        <button class="but">看看推荐</button>
+                    </view>
+                </view>
+            </block>
+        </swiper-item>
+        <swiper-item>
+            <block>
+                <view class="NoContent">
+                    <text class="icon-empty text-gray" style="font-size:400rpx"></text>
+                    <view class="but-box">
+                        <text style="font-size:30rpx" class="text-gray">没有内容</text>
+                        <button class="but">更多礼包</button>
+                    </view>
+                </view>
+            </block>
+        </swiper-item>
+    </swiper>
+</block>
